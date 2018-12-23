@@ -29,4 +29,12 @@ while True:
                 file.write(redirect + " " + website + "\n")
     else:
         print("Chill time!")
+        file = open(host_path, 'r+')
+        approved_websites = file.readlines()
+        # take pointer back to beginning of the file
+        file.seek(0)
+        for line in approved_websites:
+            if not any(website in line for website in blocked_websites):
+                file.write(line)
+            file.truncate()
     time.sleep(5)
