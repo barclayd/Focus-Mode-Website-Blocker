@@ -18,6 +18,15 @@ while True:
     if dt(dt.now().year, dt.now().month, dt.now().day, focus_mode_start) \
             < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, focus_mode_end):
         print("Work time!")
+        file = open(host_path, "r+")
+        approved_websites = file.read()
+        for website in blocked_websites:
+            if website in approved_websites:
+                pass
+            else:
+                # access to a non-approved website is recorded
+                # writes IP address of local host and website name to block
+                file.write(redirect + " " + website + "\n")
     else:
         print("Chill time!")
     time.sleep(5)
