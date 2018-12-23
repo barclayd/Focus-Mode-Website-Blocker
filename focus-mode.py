@@ -4,13 +4,15 @@ from datetime import datetime as dt
 # path to host file
 host_path = "/etc/hosts"
 
-# redirect to local host
-redirect = "127.0.0.1"
+# redirect to Google
+redirect = "google.co.uk"
 
 blocked_websites = ["www.twitter.com", "www.facebook.com"]
 
+# set start hour of focus mode (24 hour clock)
 focus_mode_start = 9
 
+# set end hour of focus mode (24 hour clock)
 focus_mode_end = 17
 
 while True:
