@@ -38,7 +38,7 @@ nano blocker.js
 
 ### Run automatically on Start-Up
 
-##### Mac & Linux Users:
+##### Mac & Linux Users: add to Cron table
 The script can be run automatically on starting up the system by using crontab.
 Open terminal and enter:
 ```
@@ -51,15 +51,6 @@ Add the following line to the end of the cron table - replacing 'path-to-focusMo
 ```
 ##### Windows Users:
 [Follow this guide to schedule scripts to run at boot for Windows ](https://www.howtogeek.com/138159/how-to-enable-programs-and-custom-scripts-to-run-at-boot/)
-
-##### How to add to Cron table:
-```
-$ sudo nano blocker.js
-```
-
-##### Windows Users:
-
-
 
 Future Updates:
 
