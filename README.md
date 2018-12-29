@@ -2,7 +2,7 @@
 
 Website blocker to help facilitate productivity.
 
-Built using Python.
+Built using Python and JavaScript.
 
 Run the program using a task scheduler such as [Cron Job Scheduler](https://crontab.guru/ "Crontab guru") and reboot your computer to see the website blocker take effect.
 
