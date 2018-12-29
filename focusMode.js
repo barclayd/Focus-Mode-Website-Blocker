@@ -12,7 +12,7 @@ const focusModeStart = 9;
 // set end hour of focus mode (24 hour clock)
 const focusModeEnd = 17;
 
-const blocker = () => {
+const focusMode = () => {
   let date = new Date();
   let hours = date.getHours();
   if(hours >= focusModeStart && hours < focusModeEnd) {
@@ -35,9 +35,10 @@ const blocker = () => {
           }
       })
   } else {
+      // unblock blocked websites during chill time
       console.log('Chill time!');
+      // append to empty string completeContent
       let completeContent = '';
-        // unblock blocked websites during chill time
       fs.readFileSync(filePath)
           .toString()
           .split('\n')
@@ -69,5 +70,7 @@ const blocker = () => {
   }
 };
 
-blocker();
-setInterval(blocker, delay);
+focusMode();
+setInterval(() => {
+    focusMode();
+}, delay);
